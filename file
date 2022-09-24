@@ -1,0 +1,30 @@
+get kuber version => kubectl version --short
+get all nodes in the current name space => kubectl get nodes
+configure kub cluster => aws eks update-kubeconfig --region us-east-2 --name uda-prod
+get services => kubectl get svc
+kub config file => /home/donjoe/.kube/config
+get kube roles => kubectl get roles -A
+get kube nodes => kubectl get nodes
+get user configured for aws commands => aws sts get-caller-identity
+set data of privilegded user (in our case, user used to create aws resources)
+  export AWS_ACCESS_KEY_ID=ASIAZDZ--MVEQCS
+  export AWS_SECRET_ACCESS_KEY=G8n8CZbelBmvTGok---PwVPeBB8F
+  export AWS_SESSION_TOKEN=FwoGZXI---WJeReKkmDmBHGZAyFVOlfCPFo7BPJE4cvy65/20/2gsNTJmi+GjXRt3IVj4IFVcF5WiCyZClI6PdqvVPurkYrvTEaR9AvkUpeJmAJCabxFWcJ5lNcmXKsJ5bXoTYKrYzHAECaAdhM5KDqfmdDghWSVdnp4mI1OSPyiYxTwGN9vEJtOuPWcl/eod9I6bmjkNkYEpEWHbeRnaQqFG5gKzgexHQPooElaX+cgQK8JLr3UwF7oYFUGV28lCrtMNTlxzfbTxNrWSrx435XRWS4RDzNyiQibyZBjIt+35rVHIMod7HzLgVky4cGWw4zLAfkK9lX9JzEOW3oRgtiCd7gDpto5+xsK6q
+
+get pods and nodes they are running on => kubectl get pods -A
+get namespace => kubectl get namespaces
+get current context => kubectl config current-context
+get config info (read from the .config file) => kubectl config view
+create kube namespace => kubectl create namespace dev
+view namespaces => kubectl get namespaces
+change namespace => kubectl config set-context --current --namespace=dev
+change namespace back to default => kubectl config set-context --current --namespace=default
+start an nginx pod => kubectl run --image=nginx nginx01
+enter pod shell => kubectl exec -it nginx01 bash
+apply a yaml file => kubectl apply -f  env-configmap.yaml 
+delete a pod => kubectl delete pod nginx01
+get pods and nodes they are running on => kubectl get pods -o wide
+view config map => kubectl get configmap
+get all secrets => kubectl get secrets
+more information about a secret =>  kubectl describe secrets/<secret name>
+get secrets in json => kubectl get secret mysecret -o jsonpath='{.data}'
