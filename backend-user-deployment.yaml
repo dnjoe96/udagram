@@ -23,4 +23,4 @@ spec:
           - configMapRef:
               name: uda-configmap
           - secretRef:
-                name: envsecret
+              name: envsecret
