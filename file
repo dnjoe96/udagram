@@ -28,3 +28,8 @@ view config map => kubectl get configmap
 get all secrets => kubectl get secrets  (with timeout: kubectl apply -f env-configmap.yaml --request-timeout=40s)
 more information about a secret =>  kubectl describe secrets/<secret name>
 get secrets in json => kubectl get secret mysecret -o jsonpath='{.data}'
+
+
+get all deployments => kubectl get deployments --all-namespaces
+delete all deployments => kubectl delete -n {{ namespace }} deployment {{ deployment name }}
+
