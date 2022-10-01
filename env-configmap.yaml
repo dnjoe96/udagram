@@ -3,8 +3,10 @@ kind: ConfigMap
 metadata:
   name: uda-configmap
 data:
-  POSTGRES_HOST: softdev.cgi5c3fajjm9.us-east-1.rds.amazonaws.com
+  POSTGRES_HOST: softdev.ccyy883vieku.us-east-1.rds.amazonaws.com
   POSTGRES_DB: postgres
   AWS_REGION: us-east-2
+  AWS_BUCKET: arn:aws:s3:::uda-buk
   AWS_PROFILE: default
   URL: http://localhost:8100
+  JWT_SECRET: testing
