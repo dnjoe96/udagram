@@ -15,8 +15,8 @@ spec:
         app: backend-feed
     spec:
       containers:
-        - name: udagram-api-feed
-          image: donjoee/udagram-api-feed:v0
+        - name: backend-feed
+          image: donjoee/udagram-api-feed:v1
           ports:
             - containerPort: 8080
           envFrom:

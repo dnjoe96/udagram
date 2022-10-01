@@ -15,8 +15,8 @@ spec:
         app: backend-user
     spec:
       containers:
-      - name: udagram-api-user
-        image: donjoee/udagram-api-user:v0
+      - name: backend-user
+        image: donjoee/udagram-api-user:v1
         ports:
         - containerPort: 8080
         envFrom:
