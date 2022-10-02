@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: backend-feed
+  name: reverseproxy
   labels:
-    app: backend-feed
+    app: reverseproxy
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: backend-feed
+      app: reverseproxy
   template:
     metadata:
       labels:
-        app: backend-feed
+        app: reverseproxy
     spec:
       containers:
-      - name: udagram-api-feed
-        image: donjoee/udagram-api-feed
+      - name: reverseproxy
+        image: donjoee/udagram-reverseproxy:v1
         ports:
-        - containerPort: 80
+        - containerPort: 8080

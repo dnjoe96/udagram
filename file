@@ -33,3 +33,6 @@ get secrets in json => kubectl get secret mysecret -o jsonpath='{.data}'
 get all deployments => kubectl get deployments --all-namespaces
 delete all deployments => kubectl delete -n {{ namespace }} deployment {{ deployment name }}
 
+to get details of a service or services => kubectl describe services
+
+port forwarding => kubectl port-forward service/reverseproxy 8080:8080
